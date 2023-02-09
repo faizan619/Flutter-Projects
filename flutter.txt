@@ -1,0 +1,1221 @@
+
+Lecture 5th -->
+
+import 'package:flutter/material.dart';
+
+void main()=> runApp(MaterialApp(
+	title:'Flutter App',
+	home:Text(' Hope You like this basic app'),													-done
+	debugShowCheckedModeBanner:false,
+));
+
+
+
+
+Lecture 6th -->
+
+import 'package:flutter/material.dart';
+
+void main()=>runApp(MaterialApp(
+	title:'Faizan Application ',
+	//home:Text('Welcome to my home page'),
+	home:Center(
+		child: Text('Welcome to my home page'),													-done
+	),
+	debugShowCheckedModeBanner:false,
+));
+
+
+Lecture 7th -->
+
+[ 1 ]
+import 'package:flutter/material.dart';
+
+void main()=> runApp(MaterialApp(
+	title:'Flutter App',
+	home:Text(
+		' Hope You like this basic app',
+		//textAlign:TextAlign.center ,
+		textAlign:TextAlign.right ,
+		style: TextStyle(fontSize : 60.0,fontWeight:FontWeight.bold),											-done
+		overflow:TextOverflow.ellipsis,
+	),
+	debugShowCheckedModeBanner:false,
+));
+
+[ 2 ]
+
+void main()=> runApp(MaterialApp(
+	title:'Flutter App',
+	home: Text.rich(
+		TextSpan(
+			text: 'Welcome to',	//default text style
+			children: <TextSpan>[
+				TextSpan(text: ' faizan app',
+					style: TextStyle(
+						fontStyle : FontStyle.italic,
+						fontSize : 70.0,
+						TextSpan(
+							text: 'in flutter',
+							style: TextStyle(
+								fontStyle : FontStyle.italic,
+								fontSize : 70.0,	
+							),
+						),
+					),
+				),
+			]
+		)
+	),
+	debugShowCheckedModeBanner:false,
+));
+(fontStyle : FontStyle.italic),
+method	property	 value
+
+method in camel case
+property in pascal case
+
+
+8th lecture -->
+
+[ 1 ]
+
+import 'package:flutter/material.dart';
+//widget ka phela letter capital hota hi--pascal case, property ka camel case hota h
+void main()=>runApp(
+	MaterialApp(
+		title: 'Flutter Application',
+		DebugShowCheckedModeBanner:false,
+		home: Scaffold(
+			appBar: AppBar(
+				title: Text(' faizan Application '),
+magic				backgroundColor: Colors.pink,
+				centerTitle: true,
+				
+				//title: Center(
+				//	child: Text(' faizan application '),
+				//),
+			) ,//AppBar
+				//body: Text(' Hello Faizan Alam '),											-done
+			body: Center(
+					child:Text(' faizan ALam' ),
+			),
+			floatingActionButton : FloatingActionButton(
+					child:Text('click'),
+					onPressed : () =>{
+						print("You click me"),
+					},
+					tooltip : 'Click Button',
+magic					backgroundColor :Colors.green
+			) ,
+			bottomNavigationBar: BottomAppBar(
+					//child: Text(' Bottom Bar ') ,
+					child: Container(
+						height: 40.0,
+						child: Text(' Bottom Bar '),
+				),
+magic				color:Colors.pink
+			),
+		), //Scaffold
+	),//MaterialApp
+);//runApp
+
+
+AppBar(
+tile;Text('faizan' , style: TextStyle(fontFamily: 'Pacifico'),),
+
+
+
+10th Lecture-->
+ 
+[ 1 ]
+import 'package:flutter/material.dart';
+
+void main()=>(
+	MaterialApp(
+		title:'Flutter Application ',
+		debugShowCheckedModeBanner: false,
+		home:Scaffold(
+			appBar:AppBar(
+				title:Text(' Faizan Application '),
+				backgroundColor:Colors.black,
+			),
+
+magic			//body: Image(
+			//	image: NetworkImage(' paste the image address from browser ') ,
+			//	height:260,
+			//) ,
+
+			//body: Image.network('  paste the image address from browser '),
+
+			body: Image.asset(' asserts/images/1.jpg ', 
+					height: 300,
+					width:300 ,
+					//fit:BoxFit.cover,
+					fit:BoxFit.fill,
+				 ),
+
+
+			floatingActionButton:FloatingActionButton(
+				child:Text('Click'),
+				onPressed:()=>{
+					print("Your pressed me"),
+				},
+			),
+			bottomNavigationBar:BottomAppBar(
+				child:Container(
+					child:Text('Bottom App Bar'),
+				),
+			),
+		),
+	),
+);
+
+[ 2 ]
+
+import 'package:flutter/material.dart';
+void main()=>(
+	MaterialApp(
+		title:'Flutter Application ',
+		debugShowCheckedModeBanner: false,
+		home: Home(),
+	),
+);
+
+class Home extends StatelessWidget{
+	@override
+	Widget build(BuildContext context){
+		return Scaffold(
+			appBar:AppBar(
+				title:Text(' Faizan Application '),
+				backgroundColor:Colors.black,
+			),
+
+magic			//body: Image(
+			//	image: NetworkImage(' paste the image address from browser ') ,
+			//	height:260,
+			//) ,
+
+			//body: Image.network('  paste the image address from browser '),
+
+			body: Image.asset(' asserts/images/1.jpg ', 
+					height: 300,
+					width:300 ,
+					//fit:BoxFit.cover,
+					fit:BoxFit.fill,
+				 ),
+
+
+			floatingActionButton:FloatingActionButton(
+				child:Text('Click'),
+				onPressed:()=>{
+					print("Your pressed me"),
+				},
+			),
+			bottomNavigationBar:BottomAppBar(
+				child:Container(
+					child:Text('Bottom App Bar'),
+				),
+			),
+		);
+	}
+}
+
+asserts:
+	- asserts/images/1jpg
+
+
+
+
+
+
+
+
+
+
+
+
+class MySTLHome extends StatelessWidget{
+	@override
+	Widget build(BuildContext context){
+		return Container();
+	}
+}
+
+class MyHome extends StatefulWidget{
+	@override
+	_MyHomeState createState() => _MyHomeState();
+}
+
+class _MyHomeState extends State<MyHome>{
+	int counter = 0;
+	@override
+	Widget build(BuildContext context){
+		return //copy from scaffold
+
+		onPressed : ()=>{
+			setState(() {
+				counter += 1;
+			} )
+		},
+	}
+}
+
+
+
+
+
+[ 11 ] lecture -->
+
+
+
+import 'package:flutter/material.dart';
+void main()=>(
+	MaterialApp(
+		title:'Flutter Application ',
+		debugShowCheckedModeBanner: false,
+		home: Home(),
+	),
+);
+
+class Home extends StatefulWidget{
+	@override
+	_HomeState createState() => _HomeState();
+}
+
+
+class _HomeState extends State<Home>{
+	@override
+	Widget build(BuildContext context){
+		return Scaffold(														-Done
+			appBar:AppBar(
+				title:Text(' Faizan Application '),
+				backgroundColor:Colors.black,
+			),
+
+			body: Container(
+				child:Center(
+					child: Text(
+						"hello World"
+						style:TextStyle(color:Colors.white,fontSize:20),
+					),
+					
+				),
+				color:Colors.red[300],
+				height:200.0,
+				width:200.0,
+				padding: EdgeInsets.all(10),
+				margin: EdgeInsets.all(20),
+				//transform: Matrix4.rotationZ(0.2),
+				transform: Matrix4.rotationX(0.2),
+			),
+			
+		);
+	}
+}
+
+
+
+
+
+
+
+[ 12 ] lecure -->
+
+body: Center(
+child: RaisedButton(onPressed: ()=>{
+	child:Text('button'),
+	print("Raised button clicked",style:TextStyle(color:Colors.white,fontSize:30.0)),
+	color:Colors.blue,
+	textColor:Colors.red, //comment the above style first..
+},),
+
+
+child:FlatButton(
+	onPressed: ()=>{
+		print("Flat button press"),
+	},
+	child:Text('flat button'),	
+	textColor:Colors.blue,
+	//onLongPressed
+	padding:EdgeInsets.all(20),
+),
+
+
+child:Icon(icons.favourite,size: 60,color:Colors.red),
+Icons.add_circle
+//for more icons search on material icon of google fonts	
+),
+
+
+//for icons check in yaml file flutter--> uses-material-design:true
+
+
+
+
+
+[ 13 ]-->lecture
+
+body: Row(
+	//mainAxisAlignment: MainAxisAlignment.start,
+	mainAxisAlignment: MainAxisAlignment.end,
+	//mainAxisAlignment: MainAxisAlignment.spaceAround,
+	//mainAxisAlignment: MainAxisAlignment.spaceBetween,
+	//mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+	crossAxisAlignment :CrossAxisAlignment.start,
+	crossAxisAlignment :CrossAxisAlignment.stretch,
+	crossAxisAlignment :CrossAxisAlignment.baseline,
+	crossAxisAlignment :CrossAxisAlignment.end,
+
+	textDirection: TextDirection.ltr,	
+	textDirection:TextDirection.rtl,
+	
+	children:<Widget>[
+	Container(															-Done
+		padding:EdgeInsets.all(30), 
+		decoration: BoxDecoration(color:Colors.pink),
+		child:Text(
+			'hello',
+			style:TextStyle(
+				fontSize:40.0,
+				color:Colors.white,
+				)
+			),
+		),
+	Container(
+		padding:EdgeInsets.all(30), 
+		decoration: BoxDecoration(color:Colors.pink),
+		child:Text(
+			'faizan',
+			style:TextStyle(
+				fontSize:40.0,
+				color:Colors.white,
+				)
+			),
+		),
+	Container(
+		padding:EdgeInsets.all(30), 
+		decoration: BoxDecoration(color:Colors.pink),
+		child:Text(
+			'Alam',
+			style:TextStyle(
+				fontSize:40.0,
+				color:Colors.white,
+				)
+			),
+		),
+	]
+),
+
+
+
+body: Column(
+	 
+),
+
+
+
+
+
+
+
+ Expanded(
+	flex:1,	//default hai already
+	child:Container()
+),
+
+
+lec 18-->
+remove the Row part
+centerTitle:true
+
+==>
+
+import 'package:flutter/material.dart';
+
+void main()=>runApp(
+  MaterialApp(
+    title:'Flutter Application',
+    debugShowCheckedModeBanner: false,
+    home: Home(),
+  ),
+);
+
+class Home extends StatefulWidget{
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home>{
+  var a1 = 'Flutter';
+  int _selectedItem = 0;
+
+  void _onTapItem(int index){
+    setState(() {
+      _selectedItem = index;															-done
+    });
+  }
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar:AppBar(
+        title:Text(a1),
+        centerTitle:true,
+      ),
+      bottomNavigationBar:BottomNavigationBar(
+        type:BottomNavigationBarType.fixed,
+        items:const<BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon:Icon(Icons.home),label:'Home'),
+          BottomNavigationBarItem(icon:Icon(Icons.search),label:'Search'),
+          BottomNavigationBarItem(icon:Icon(Icons.add),label:'Add'),
+          BottomNavigationBarItem(icon:Icon(Icons.favorite),label:'Favourite'),
+          BottomNavigationBarItem(icon:Icon(Icons.verified_user),label:'Profile'),
+        ],
+        // currentIndex:2,
+        currentIndex:_selectedItem,
+        onTap:_onTapItem,
+        // selectedFontSize:15,
+        selectedItemColor:Colors.red,
+      )
+    );
+  }
+}
+
+
+
+
+[ 19 ]-->
+
+import 'package:hello_world/Screens/home_screen.dart';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MaterialApp(
+  theme: ThemeData(
+    brightness: Brightness.dark,
+    primaryColor: Colors.blueGrey
+  ),
+  home: Scaffold(
+    appBar: AppBar(
+      title: const Text('MaterialApp Theme'),
+    ),
+  ),
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#############################################################################################
+create a folder in
+lib/screens/home_screen.dart
+
+
+
+
+####inside home_screen.dart
+import 
+
+class Home extends StatefulWidget {
+	@override
+	_homeS createState() => _HomeS();
+}
+
+class _HomeS extends State<Home>{
+	int _selecting = 0;
+	void _onTapItem(int index){
+	setState((){
+		_selecting = index;
+	});
+	if( index == 4 ){
+		Navigator.pushNamed( context , '/profile' );
+	}
+}
+@override
+Widget build(BuildContext context){
+		return Scaffold same
+	}
+}
+
+
+
+####inside profile_screen.dart
+import 'package:flutter/material.dart';
+
+class Profile extends StatelessWidget {
+	return Scaffold(
+		appBar:AppBar(
+			title: Text('profile'),
+		),
+		body:Center(
+			child:Text('Profile  page'),
+		),
+	),
+}
+
+
+
+
+####inside main.dart
+import 'package:hello_world/screens/home_screen.dart';
+import 'package:hello_world/screens/about_screen.dart';
+
+void main()=> runApp(MaterialApp(
+	title: 'my flutter',
+	debugShowCheckedModeBanner:false,
+	initialRoute: ' / ',
+	routes: {
+		' / ' : (context) => Home(),
+		' /about ' : (context) => Profile(),  
+		' /notification':(context) => NotificationScreen(),
+	},
+)
+);
+
+
+
+
+
+[ 21 ] -->Lecture/
+//inside appbar
+actions:<Widget>[
+	IconsButton(onPressed:(){
+		//print('heyy');
+		Navigator.pushNamed(context, '/notification')	
+	}),
+	icon:Icon(Icons.add_alert),
+]
+
+
+
+#####notificaitonScreen
+import
+
+class notificaiton extends StatefulWidget{}
+
+class mynotification extends State<notification>{
+	@override
+	Widget build(BuildContext context){
+		return DefaultTabController(
+			length: 2,
+			child:Scaffold(
+				appbar:AppBar(
+					title:Text("heelo"),
+					bottom:TabBar(
+						tabs:<Widget>[
+							Tab(
+								icon:Icon(Icons.call_missed),		
+								text: 'Missed call',
+							),
+							Tab(
+								icon:Icon(Icons.call_received),
+								text: 'Recievedcall'
+							),
+						],
+					),
+				),
+				body: TabbarView(
+					chiildren:<Widget>[
+						Center(child:Text('missed call here')),
+						Center(child:Text('recieved call here')),
+					],
+				),
+			),
+		)
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+appBar:AppBar(
+	title:Text('instagram'),
+	centerTitle:true,
+	actions:<Widget>[
+		IconButton(
+			onPressed:(){ NavigatorpushNamed(context, '/notification' ), },
+			icon:Icon(Icons.add_alert),
+		)
+	],
+),
+
+
+inside main.dart //upper wala code home_screen.dart eh aayega
+
+' /notification ': (context)  => NotificationScreen(),
+
+[ 22 ] lecture ==>
+
+appBar:AppBar(
+	title:Text('instagram'),
+	centerTitle:true,
+	actions:<Widget>[
+		Stack(
+			children:<Widget>[
+				IconButton(
+					onPressed:(){ NavigatorpushNamed(context, '/notification' ), },
+					icon:Icon(Icons.add_alert),
+				),
+				Positioned(
+					top: 14.0,
+					bottom : 10.0,
+					left: 12.0
+					child: Container( 
+						decoration: BoxDecoration( shape:BoxShape.circle , colr )					
+						child: Text( '10' ), 
+						alignment:Alignment.center.
+					),
+				),
+			],
+		),
+	],
+),
+
+
+
+
+
+
+
+
+
+
+body: Card(
+	elevation: 3.0,
+	clipBehavior : Clip.antiAlias,
+	margin: EdgeInsets.all(10),
+	child: Column(
+		mainAxisSize:MainAxisSize.min,
+		children <Widget>[
+			ListTitle(
+				leading : Icon(Icons.label),
+				title:Text('title '),
+				subtitle: Text( 'Sub title ' ),
+			),
+			Image.asset(
+				 ' assets/images/1.jpg',
+				height: 200.0,
+				width:200.0,
+				fit: BoxFit.cover
+			 ),
+		],
+	),
+),
+
+
+
+
+
+[ 24 ] Lecture -->
+ Card(
+	elevation:3.0,
+	clipBehavior:Clip.antiAlias,
+	margin:EdgeInsets.all(5),
+	child:InkWell(
+		onTap: () {
+			print(' Card Clicked '),
+		},
+		splashColor: Colors.red.withAlpha(40),
+		child:Column(
+			mainAxisSize:MainAxisSize.min,	
+			children:<Widget>[
+				ListTile:(
+					//trailing:icon:(Icons.delete),
+					//leading:icon(Icons.label),
+					leading:FlutterLogo(),
+					title:Text('title'),
+					subtitle: Text('sub title'),		
+					isTressLine: true
+					,//dense:true,
+					trailing:Icon(Icons.delete),
+				),
+				Image.network('http:'),
+			],
+		),
+	),
+	
+),
+
+
+
+
+[ 26 ] lecture -->
+
+inside notification bar
+
+body: ListView(
+	padding:EdgeInsets.all(8.0),
+	scrollDirection:Axis.vertical ,  //default
+	scrollDirection: Axis.horizontal,
+	children:<Widget>[
+		Container(
+			height:80.0,
+			color:Colors.red,
+			child:Text(
+				'Notification Here',
+				style:TextStyle(fontSize:20,),
+			),
+		),
+		Container(
+			height:80.0,
+			color:Colors.red,
+			child:Text(
+				'Notification Here',
+				style:TextStyle(fontSize:20,),
+			),
+		),
+		Container(
+			height:80.0,
+			color:Colors.red,
+			child:Text(
+				'Notification Here',
+				style:TextStyle(fontSize:20,),
+			),
+		),
+		Container(
+			height:80.0,
+			color:Colors.red,
+			child:Text(
+				'Notification Here',
+				style:TextStyle(fontSize:20,),
+			),
+		),
+		Container(
+			height:80.0,
+			color:Colors.red,
+			child:Text(
+				'Notification Here',
+				style:TextStyle(fontSize:20,),
+			),
+		),
+		Container(
+			height:80.0,
+			color:Colors.red,
+			child:Text(
+				'Notification Here',
+				style:TextStyle(fontSize:20,),
+			),
+		),
+		Container(
+			height:80.0,
+			color:Colors.red,
+			child:Text(
+				'Notification Here',
+				style:TextStyle(fontSize:20,),
+			),
+		),
+	],
+),
+
+
+
+
+[ 27 ] lecture -->
+
+
+List _notification = List<String>.generate(5000,(index) => 'notification $index');
+@override
+
+Widget build(BuildContext context){
+	return DefaultTabController(
+		length: 3,
+		child: Scaffold(
+			appBar:AppBar(
+				title:Text('Notification'),
+			),
+			body: ListView.builder(
+				itemCount: _notifications.length, 
+				itemBuilder:(context,index){
+					return Card(			
+						child:ListTile(
+							leading: FlutterLogo(),
+							title:Text( _notifications[index]),
+						);
+					),
+				},
+			),
+		),
+	),
+}
+
+
+
+
+
+
+
+
+
+[ 30 ]lecture -->
+
+body: SingleChildScrollView(
+	scrollDirection: Axis.vertical,
+	child://write form code here,
+),
+
+
+
+[ 31 ]lecture -->
+
+#####inside homescreen.dart
+before body
+
+drawer: DrawerScreen(),		//create a class with drawer screen
+
+#####inside drawer_screen.dart
+
+import 'package:flutter/material.dart';
+
+class DrawerScreen extends StatelessWidget{
+	@override
+	Widget build(BuildContext context){
+		return Container(
+			child: Drawer(
+				child: ListView(
+					padding: EdgeInsets.zero,
+					children:<Widget>[
+						UserAccountDrawerHeader(
+							accountName: Text(' Faizan Alam'),
+							accountEmail: Text(' alamf6023@gmail.com '),
+							currentAccountPicture: circleAvatar(
+								backgroundColor: Colors.blue,
+								child:Text( ' F ',style:TextStyle(fontSize:40.0), ),
+							) ,
+						),
+						ListTile(	
+							leading: Icon(Icons.account),
+							title: Text('Profile'),	
+							onTap:(){},					
+						),
+						ListTile(	
+							leading: Icon(Icons.account),
+							title: Text('Notification'),	
+							onTap:(){},					
+						),
+						ListTile(	
+							leading: Icon(Icons.account),
+							title: Text('Setting'),	
+							onTap:(){},					
+						),
+					],
+				),
+			),
+		);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ 28 ] lecture -->
+
+in profilescreen.dart
+
+return Scaffold(
+	appBar:AppBar(
+		title:Text(' Profile '),
+	),
+	body: Padding(
+		padding: const EdgeInsets.all(0.8),
+		child:Form(
+			child: Column(
+				crossAxisAlignment: CrossAxisAlignment.start,
+				children: <Widget>[
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter First Name',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter Last Name',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter Email Name',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter Phone',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child: Container(
+							height: 60.0,
+							color: Colors.transparent,
+							width: MediaQuery.off(context).size.width,
+							child: RaisedButton(
+								shape: RoundedRectangleBorder(borderRadius: BprderRadius.circular(30.0)),
+								child: Text(' Update ',style:TextStyle(color: Colors.white)),
+								color: Colors.blue[200],
+								onPressed: () {},
+							),
+						),
+					),
+					
+				],
+			),
+		),
+	),
+),
+
+
+
+
+[ 29 ] lecture --> 
+
+import 'package:form_field_validator/form_field_validator.dart';
+
+class profile extends StatefulWidget{
+	@overide
+	profilestate createState() => profileState();
+}
+
+class profileState extends State<profile>{
+	Map userData = {};
+	final _formKey = GlobalKey<FormState>();
+	@override
+	Widget build(BuildContext context){
+		return	Scaffold(
+	appBar:AppBar(
+		title:Text(' Profile '),
+	),
+	body: Padding(
+		padding: const EdgeInsets.all(0.8),
+		child:Form(
+magic			key: _formKey,
+			child: Column(
+				crossAxisAlignment: CrossAxisAlignment.start,
+				children: <Widget>[
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter First Name',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+magic							errorStyle: TextStyle(fontSize:50.0),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+magic							//validator: (value){
+							//	if(value.isEmpty){return " Please enter first name " ; }
+							//	else if (value.length < 5){return  " please enter atleast 5 number " ; }
+							//	return null ;
+							//}
+
+
+							
+							validator: MultiValidator([
+								RequiredValidator(errorText: " Please enter first name "),
+								MinLengthValidator(5, errorText: "first name should be atleast 5 character" ),
+								EmailValidator(errorText: 'enter a valid email address') 
+								PatternValidator(r` (^[0,9]{10}$)`, errorText: " please enter valid number ")								
+							]),
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter Last Name',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter Email Name',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child : TextFormField(
+							decoration: InputDecoration(
+								hintText: 'Enter Phone',	
+								labelText: 'First Name ',
+								prefixIcon : Icon(
+									Icons.person,color: Colors.grey,
+									),
+								border: OutlineInputBorder(
+									borderSide: BorderSide(color:Colors.grey),
+									borderRadius: BorderRadius.all(Radius.circular(30.0)),
+								),			
+							) ,
+						),
+					),
+					Padding(
+						padding: EdgeInsets.all(0.8),
+						child: Container(
+							height: 60.0,
+							color: Colors.transparent,
+							width: MediaQuery.off(context).size.width,
+							child: RaisedButton(
+								shape: RoundedRectangleBorder(borderRadius: BprderRadius.circular(30.0)),
+								child: Text(' Update ',style:TextStyle(color: Colors.white)),
+								color: Colors.blue[200],
+								onPressed: () {
+magic									if(_formKey.currentState.validate()){print(' Form Submitted ')}
+								},
+							),
+						),
+					),
+					
+				],
+			),
+		),
+	),
+),
+
+	}
+}
+
+
+go to pub.ymal
+in dependencies 
+ 
+form_field_validator: ^1.1.0
