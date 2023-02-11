@@ -1,1 +1,3 @@
-<a href="https://github.com/faizan619/Flutter-Projects/blob/main/YoutubeUI/youtubeUI.png">View Demo Photo</a>
+# Here is how it looks like.
+
+![](./youtubeui.png)
