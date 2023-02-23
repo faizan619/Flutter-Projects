@@ -56,7 +56,7 @@ void main()=> runApp(MaterialApp(
 						fontStyle : FontStyle.italic,
 						fontSize : 70.0,
 						TextSpan(
-							text: 'in flutter',
+							text: 'in flutter', 
 							style: TextStyle(
 								fontStyle : FontStyle.italic,
 								fontSize : 70.0,	
@@ -129,49 +129,6 @@ tile;Text('faizan' , style: TextStyle(fontFamily: 'Pacifico'),),
 10th Lecture-->
  
 [ 1 ]
-import 'package:flutter/material.dart';
-
-void main()=>(
-	MaterialApp(
-		title:'Flutter Application ',
-		debugShowCheckedModeBanner: false,
-		home:Scaffold(
-			appBar:AppBar(
-				title:Text(' Faizan Application '),
-				backgroundColor:Colors.black,
-			),
-
-magic			//body: Image(
-			//	image: NetworkImage(' paste the image address from browser ') ,
-			//	height:260,
-			//) ,
-
-			//body: Image.network('  paste the image address from browser '),
-
-			body: Image.asset(' asserts/images/1.jpg ', 
-					height: 300,
-					width:300 ,
-					//fit:BoxFit.cover,
-					fit:BoxFit.fill,
-				 ),
-
-
-			floatingActionButton:FloatingActionButton(
-				child:Text('Click'),
-				onPressed:()=>{
-					print("Your pressed me"),
-				},
-			),
-			bottomNavigationBar:BottomAppBar(
-				child:Container(
-					child:Text('Bottom App Bar'),
-				),
-			),
-		),
-	),
-);
-
-[ 2 ]
 
 import 'package:flutter/material.dart';
 void main()=>(
@@ -198,7 +155,7 @@ magic			//body: Image(
 
 			//body: Image.network('  paste the image address from browser '),
 
-			body: Image.asset(' asserts/images/1.jpg ', 
+			body: Image.asset(' asserts/images/1.jpg ', 									-Done
 					height: 300,
 					width:300 ,
 					//fit:BoxFit.cover,
@@ -229,37 +186,6 @@ asserts:
 
 
 
-
-
-
-
-
-
-class MySTLHome extends StatelessWidget{
-	@override
-	Widget build(BuildContext context){
-		return Container();
-	}
-}
-
-class MyHome extends StatefulWidget{
-	@override
-	_MyHomeState createState() => _MyHomeState();
-}
-
-class _MyHomeState extends State<MyHome>{
-	int counter = 0;
-	@override
-	Widget build(BuildContext context){
-		return //copy from scaffold
-
-		onPressed : ()=>{
-			setState(() {
-				counter += 1;
-			} )
-		},
-	}
-}
 
 
 
@@ -313,42 +239,6 @@ class _HomeState extends State<Home>{
 		);
 	}
 }
-
-
-
-
-
-
-
-[ 12 ] lecure -->
-
-body: Center(
-child: RaisedButton(onPressed: ()=>{
-	child:Text('button'),
-	print("Raised button clicked",style:TextStyle(color:Colors.white,fontSize:30.0)),
-	color:Colors.blue,
-	textColor:Colors.red, //comment the above style first..
-},),
-
-
-child:FlatButton(
-	onPressed: ()=>{
-		print("Flat button press"),
-	},
-	child:Text('flat button'),	
-	textColor:Colors.blue,
-	//onLongPressed
-	padding:EdgeInsets.all(20),
-),
-
-
-child:Icon(icons.favourite,size: 60,color:Colors.red),
-Icons.add_circle
-//for more icons search on material icon of google fonts	
-),
-
-
-//for icons check in yaml file flutter--> uses-material-design:true
 
 
 
@@ -566,7 +456,7 @@ class Home extends StatefulWidget {
 class _HomeS extends State<Home>{
 	int _selecting = 0;
 	void _onTapItem(int index){
-	setState((){
+	setState((){														- Done
 		_selecting = index;
 	});
 	if( index == 4 ){
@@ -605,7 +495,7 @@ import 'package:hello_world/screens/about_screen.dart';
 void main()=> runApp(MaterialApp(
 	title: 'my flutter',
 	debugShowCheckedModeBanner:false,
-	initialRoute: ' / ',
+	initialRoute: ' / ',												-Done
 	routes: {
 		' / ' : (context) => Home(),
 		' /about ' : (context) => Profile(),  
@@ -650,7 +540,7 @@ class mynotification extends State<notification>{
 								text: 'Missed call',
 							),
 							Tab(
-								icon:Icon(Icons.call_received),
+								icon:Icon(Icons.call_received),				-done
 								text: 'Recievedcall'
 							),
 						],
@@ -692,7 +582,7 @@ appBar:AppBar(
 	centerTitle:true,
 	actions:<Widget>[
 		IconButton(
-			onPressed:(){ NavigatorpushNamed(context, '/notification' ), },
+			onPressed:(){ Navigator.pushNamed(context, '/notification' ), },									-Done
 			icon:Icon(Icons.add_alert),
 		)
 	],
@@ -714,7 +604,7 @@ appBar:AppBar(
 				IconButton(
 					onPressed:(){ NavigatorpushNamed(context, '/notification' ), },
 					icon:Icon(Icons.add_alert),
-				),
+				),												-Done
 				Positioned(
 					top: 14.0,
 					bottom : 10.0,
@@ -1085,7 +975,7 @@ return Scaffold(
 
 
 [ 29 ] lecture --> 
-
+https://pub.dev/packages/form_field_validator
 import 'package:form_field_validator/form_field_validator.dart';
 
 class profile extends StatefulWidget{
@@ -1219,3 +1109,302 @@ go to pub.ymal
 in dependencies 
  
 form_field_validator: ^1.1.0
+
+
+
+
+
+
+
+
+
+
+
+#List of data
+
+List<String> quotes = [
+	'be strong and healthy',
+	'i have everything but i dont show',
+	'trurth is truth accept it '
+];
+
+body:Column(
+	children:quotes.map((quote) => Text(quote)).toList(),
+)
+
+
+Scaffold(
+	appBar:AppBar(
+		elevation:0.0,
+	),
+	body:Padding(
+		padding:EdgeInsets.fromLTRB( 30.0 , 40.0 , 90.0 , 0.0 ),
+		child:Column(
+			crossAxisAlignment:CrossAxisAlignment.center,
+			children:<Widget>[
+				Center(
+					child:CircleAvatar(
+						backgroundImage: AssetImage('assets/thumb.jpg'),
+						radius:40.0,
+					),
+				),	
+				Divider(
+					height: 60.0,
+					color:Colors.grey
+				),
+				Text(
+					" Name ",
+					style:TextStyle(
+						color:,
+						letterSpacing:2.0,
+					),
+				),
+				SizedBox(height:10.0),
+				Text(
+					"Faizan Alam",
+					style:TextStyle(
+						color:, fontSize,  fontWeight
+						letterSpacing:2.0,
+					),
+				),
+				SizedBox(height:10.0),
+				Text(
+					" Skill ",
+					style:TextStyle(
+						color:,
+						letterSpacing:2.0,
+					),
+				),
+				SizedBox(height:10.0),
+				Text(
+					" App and Web Developer ",
+					style:TextStyle(
+						color:, fontSize,  fontWeight
+						letterSpacing:2.0,
+					),
+				),
+				SizedBox(height:10.0),
+				Row(
+					children:<Widget>[
+						Icon(	
+							Icons.email,
+							color:Colors.white
+						),
+						SizedBox( width :10.0),
+						 Text(
+							'alamf6023@gmail.com',
+							style:TextStyle(
+								color, fontSize, letterSpacing
+							),
+						),
+					],
+				),
+			],
+		),
+	),
+)
+
+
+
+custom navbar
+
+body:Padding(
+	padding:EdgeInsets.all(0.8),
+	child:Column(
+		children:[
+			height:45,
+			decoration:BoxDecoration(
+				color:Colors.grey[400],
+				borderRadius:BorderRadius.circular(25.0)
+			),
+			child: const TabBar(
+				indicator: BoxDecoration(
+					color:Colors.green,
+					borderRadius:BorderRadius.circular(25.0)
+				) ,
+				labelColor: Colors.white,
+				unselectedLabelColor:Colors.black
+				tabs:[
+					Tab( text : 'chats'),
+					Tab( text : 'status '),
+					Tab( text : 'call'),
+					Tab( text : 'setting'),
+				]
+			)
+		]
+	),
+	const Expanded(
+		child: TabBarView(
+			children:[
+				Center(child:Text(' page ')),
+				Center(child:Text(' page ')),
+				Center(child:Text(' page ')),
+				Center(child:Text(' page ')),
+			]
+		)
+	)
+)
+
+
+
+
+inside splashscreen
+
+class Splash extends StatefulWidget{}
+
+class mysplash extends State<Splash>{
+	
+	@override
+	void initState(){
+		super.initState();
+		Timer( Duration ( seconds: 5 ) , () {
+			Navigator.pushReplacement (
+				 context ,
+				MaterialPageRoute(
+				builder: (context) => DashBoardScreen(),
+				)
+			);
+		})
+	}
+	
+
+
+	@override
+	Widget build(){
+		return Scaffol();
+	}
+}
+
+
+
+####passing data from one to other screen####
+import 'package:flutter/material.dart';
+
+void main()=>runApp(
+  MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home :Home(),
+  )
+);
+
+class Home extends StatefulWidget{
+  @override
+  _home createState()=> _home();
+}
+
+class _home extends State<Home>{
+
+  var nameController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child:TextField(
+              controller: nameController,
+            ),
+          ),
+          ElevatedButton(
+            child:Text('Submit'),
+            onPressed:()=>{
+              Navigator.push(context,MaterialPageRoute(
+                builder:(context) => Profile(nameController.text.toString(),)
+              ))
+            }
+          ),
+        ],
+      )
+    );
+  }
+}
+
+class Profile extends StatelessWidget{
+  var nameFromHome;
+  Profile(this.nameFromHome);
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      body:Container(
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(child: Text("Welcome $nameFromHome")),
+          ],
+        )
+      )
+    );
+  }
+}
+
+
+
+###########auto commplete text########################
+import 'package:flutter/material.dart';
+
+void main() => runApp(const AutocompleteExampleApp());
+
+class AutocompleteExampleApp extends StatelessWidget {
+  const AutocompleteExampleApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Autocomplete Basic'),
+        ),
+        body: const Center(
+          child: AutocompleteBasicExample(),
+        ),
+      ),
+    );
+  }
+}
+
+class AutocompleteBasicExample extends StatelessWidget {
+  const AutocompleteBasicExample({super.key});
+
+  static const List<String> _kOptions = <String>[
+    'faizan',
+    'aneeza',
+    'giridhar',
+    'farhan',
+    'asad',
+    'wase',
+    'aman',
+    'taushar',
+    'txusif',
+    'zaid',
+    'auwaise',
+    'shubham',
+    'saad',
+    'abhay',
+    'ibrahim',
+    'zoef',
+    'arshad',
+    'rupesh',
+    'adnan',
+    
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Autocomplete<String>(
+      optionsBuilder: (TextEditingValue textEditingValue) {
+        if (textEditingValue.text == '') {
+          return const Iterable<String>.empty();
+        }
+        return _kOptions.where((String option) {
+          return option.contains(textEditingValue.text.toLowerCase());
+        });
+      },
+      onSelected: (String selection) {
+        debugPrint('You just selected $selection');
+      },
+    );
+  }
+}
+
