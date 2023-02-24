@@ -1502,3 +1502,50 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
+
+decoration: BoxDecoration(
+	width:150,
+	height:150,
+	decoration: BoxDecoration(
+		color:Colors.bluegrey,
+		borderRadius: BorderRadius.circular(20),
+		borderRadius: BorderRadius.only(topLeft : Radius.circular(20), bottomRight: Radius.circular(50)),
+		BorderRadius.all(20),
+		
+		border: Border.all(
+			width:2,
+			color:Colors.white,	
+		),
+		boxShadow : [
+			BoxShadow(
+				blurRadius: 11,
+				color: Colors.grey,
+				spreadRadius: 7,
+			),
+		],
+	
+		shape: BoxShape.circle
+	),
+)
+
+
+
+
+var arrNames = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+
+body:ListView.builder(itemBuilder: (context, index){	
+	return Text(arrNames[index] );
+	},
+	itemCount : arrNames.length,
+	itemExtends: 100,
+})
+
+body:ListView.seprated(itemBuilder: (context, index){	
+	return Text(arrNames[index] );
+	},
+	itemCount : arrNames.length,
+	sepratedBuilder: (context, index){
+		return Divider(height: 50, thinkness: 2, );
+	}
+})
